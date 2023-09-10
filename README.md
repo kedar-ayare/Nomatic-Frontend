@@ -41,20 +41,27 @@ I have used a third party tool called **[NGROK](https://ngrok.com/)** that helps
 ## App Screenshots:
 
 ### 1. Login Page - Common for users and admin
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-01.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-01.png" width="300">
+This screen uses 2 text fields to get email and password input from user. Once validated, it stores the received User Token in local storage using AsyncStorage module.
 
 
 2. Home page with list of Products
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-02.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-02.png" width="300">
+This screen upon loading fetches product details, user cart and user past order details using axios which are stored in state variables. The products are showed using a component called "ProdCard". This screen also shows the number of items in user cart at the top.
 
 3. When a product is added to a cart
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-03.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-03.png" width="300">
+This screen displays the UI changes once user adds a prod to the cart. The **"Add to Cart"** text is replaced with **"Remove from Cart"** and the item count in cart is increased.
 
 4. Cart Page
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-04.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-04.png" width="300">
+The cart is displayed using a modal, that shows list of items in cart using the component "ProcCompact" with a button to confirm button
+
 
 5. When Order is Confirmed
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-05.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-05.png" width="300">
+This images shows how user is prompted when the order is confirmed and asked to go back to home screen.
 
 6. Order History
-<img src="https://kedarayare.000webhostapp.com/nomatic/ss-06.png" width="300" height="200">
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-06.png" width="300">
+This screen shows all past orders of a user.
