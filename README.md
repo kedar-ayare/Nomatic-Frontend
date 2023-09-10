@@ -1,79 +1,53 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+##The submission is divided in 2 Git Repos.
 
-# Getting Started
+[Frontend](https://github.com/kedar-ayare/Nomatic-Frontend)
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+[Backend](https://github.com/kedar-ayare/Nomatic-Backend)
 
-## Step 1: Start the Metro Server
+The submission is made using React-Native, NodeJS + ExpressJS, MongoDB Atlas.
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+To try use the app, download the .apk file in the Frontend Repo, pull both repo in your local machine. 
 
-To start Metro, run the following command from the _root_ of your React Native project:
+Use "npm start" to start the development server and add your's device's IPv4 address in the add's debug menu's Bundel Location along with ':8081" as the developement server runs on the port 8081.
 
-```bash
-# using npm
-npm start
+Use "nodemon index.js" to start the Node server which would run on port 3000.
 
-# OR using Yarn
-yarn start
-```
+I have used a third party tool called "NGROK" that helps in tunnelling the port 3000, so that we can access the backend eventhough it's running on local machine. The link from NGROK should be added to the "data.js" file in "utilities" module in Frontend Repo.
 
-## Step 2: Start your Application
+Modules used in the Project:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Frontend:
+    "@react-native-async-storage/async-storage": "^1.19.3",
+    "@react-native-community/blur": "^4.3.2",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/stack": "^6.3.17",
+    "axios": "^1.5.0",
+    "react": "18.2.0",
+    "react-native": "0.72.4",
+    "react-native-check-box": "^2.1.7",
+    "react-native-modal-datetime-picker": "^17.1.0",
+    "react-native-picker-select": "^8.1.0",
+    "react-navigation-stack": "^2.10.4"
 
-### For Android
+Backend:
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "4.1",
+    "mongoose": "^7.5.0",
+    "nodemon": "^3.0.1"
 
-```bash
-# using npm
-npm run android
 
-# OR using Yarn
-yarn android
-```
+App Screenshots:
 
-### For iOS
+1. Login Page - Common for users and admin
 
-```bash
-# using npm
-npm run ios
+2. Home page with list of Products
 
-# OR using Yarn
-yarn ios
-```
+3. When a product is added to a cart
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+4. Cart Page
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+5. When Order is Confirmed
 
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+6. Order History
