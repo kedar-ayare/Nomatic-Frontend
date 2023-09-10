@@ -65,3 +65,14 @@ This images shows how user is prompted when the order is confirmed and asked to 
 6. Order History
 <img src="https://kedarayare.000webhostapp.com/nomatic/ss-06.png" width="300">
 This screen shows all past orders of a user.
+
+
+## Users in DB
+
+### Customer email: "Test" password: "Password"
+### Admin - email: "Admin" password: "Admin"
+
+
+## Due to time constraint, I couldn't complete all requirements
+### 1. Sale initiation feature is not implemented from both frontend and backend.
+### 2. Some error in backend with respect to token verification that causes the need to restart server.
