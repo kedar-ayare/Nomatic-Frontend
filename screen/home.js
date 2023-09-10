@@ -26,6 +26,7 @@ export default function Home() {
     }, [viewCart])
 
 
+    // Function that adds item from cart - Backend + State Variable
     async function addCart(id) {
         let newCart = [...cart]
         newCart.push(id)
@@ -44,6 +45,7 @@ export default function Home() {
         setCart(newCart)
     }
 
+    // Function that removes item from cart - Backend + State Variable
     async function removeCart(id) {
         let oldCart = [...cart]
         let newCart = oldCart.filter(item => item !== id)
@@ -62,12 +64,14 @@ export default function Home() {
         setCart(newCart)
     }
 
+    // Function to toggle between home and order history screen
     function navBtnClick(option) {
         if (option != navOpt) {
             setNavOpt(option)
         }
     }
 
+    // Function to fetch products, user cart and user details
     async function fetchProducts() {
         let url = getServerURL() + "/api/products/"
         let headers = {
@@ -85,6 +89,7 @@ export default function Home() {
         setOrders(userOrders.data.orders)
     }
 
+    // Function to display products in columns using "ProdCard" component
     function displayProducts() {
         let leftCol = []
         let rightCol = []
@@ -123,6 +128,8 @@ export default function Home() {
 
     }
 
+
+    // Function to display past orders
     function displayOrders() {
 
         var userOrders = []
@@ -139,6 +146,8 @@ export default function Home() {
 
     return (
         <View>
+
+            {/* Header */}
             <View style={{ height: sHeight * 0.08, backgroundColor: "#DBF0F8" }}>
                 <View style={{ width: sWidth * 0.9, height: sHeight * 0.08, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
                     <TouchableOpacity
@@ -161,6 +170,8 @@ export default function Home() {
                 </View>
             </View>
 
+
+            {/* Content - List of Products */}
             <ScrollView style={styles.content}>
                 {
                     (navOpt === "home") ? displayProducts() : displayOrders()
@@ -168,8 +179,10 @@ export default function Home() {
                 }
             </ScrollView>
 
+
             <BottomNav navBtnClick={navBtnClick} navOpt={navOpt}></BottomNav>
 
+            {/* Cart Model */}
             <Modal
                 animationType='slide'
                 visible={viewCart}

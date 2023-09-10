@@ -13,6 +13,7 @@ export default function Login({ setLoggedIn, setRole }) {
     const [errorText, setErrorText] = useState("")
 
 
+    // Function for user validation
     const handleLogin = () => {
         if (email === "") {
             setErrorText("Email Required")
@@ -34,6 +35,7 @@ export default function Login({ setLoggedIn, setRole }) {
             })
         }
     };
+
     return (
         <View style={styles.container}>
             <Text style={styles.title}>Log In</Text>

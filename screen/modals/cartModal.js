@@ -13,6 +13,7 @@ export default function CartModal({ cart, setViewCart }) {
 
     const [orderMsg, setOrderMsg] = useState("");
 
+    // Function to display cart items in list form using "ProdCompact" component
     function displayCart() {
         var prods = []
         for (var i = 0; i < cart.length; i += 1) {
@@ -28,6 +29,7 @@ export default function CartModal({ cart, setViewCart }) {
         </ScrollView>
     }
 
+    // Function to handle "Confirm Order" btn click
     async function placeOrder() {
         const prices = cart.map(prod => {
             if (Number(prod.isOnSale) > new Date()) {
@@ -54,10 +56,13 @@ export default function CartModal({ cart, setViewCart }) {
             }
         })
     }
+
     return (
         <BlurView>
             <View style={{ height: sHeight, width: sWidth, alignItems: "center", justifyContent: "center" }}>
                 <View style={{ width: sWidth * 0.85, height: sHeight * 0.85, backgroundColor: "white", borderRadius: 10 }}>
+                    {/* If cart empty - Show respective message. */}
+                    {/* If cart has items - display items in list form */}
                     {
                         (cart.length == 0) ?
                             <View style={{ marginTop: sHeight * 0.15 }}>
