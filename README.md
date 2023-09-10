@@ -41,15 +41,20 @@ I have used a third party tool called **[NGROK](https://ngrok.com/)** that helps
 ## App Screenshots:
 
 ### 1. Login Page - Common for users and admin
-![](https://kedarayare.000webhostapp.com/nomatic/ss-01.png)
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-01.png" width="300" height="200">
 
 
 2. Home page with list of Products
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-02.png" width="300" height="200">
 
 3. When a product is added to a cart
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-03.png" width="300" height="200">
 
 4. Cart Page
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-04.png" width="300" height="200">
 
 5. When Order is Confirmed
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-05.png" width="300" height="200">
 
 6. Order History
+<img src="https://kedarayare.000webhostapp.com/nomatic/ss-06.png" width="300" height="200">
